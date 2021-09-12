@@ -64,20 +64,81 @@
                             <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
+
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" data-toggle="collapse" href="#page-layouts" aria-expanded="true" aria-controls="page-layouts">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-view-list"></i>
+                        </span>
+                        <span class="menu-title">Doctor Section</span>
+                        <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse show" id="page-layouts" style="">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="{{ url('admin/add_doctors') }}">Add Dcotor</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="{{ url('admin/doctors') }}">view Dcotor</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
                     <li class="nav-item menu-items">
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                             <span class="menu-icon">
                                 <i class="mdi mdi-laptop"></i>
                             </span>
-                            <span class="menu-title">Event Management</span>
+                            <span class="menu-title">Patient Section</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" href="{{ route('product.create') }}">Add Event</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url('admin/add_patient') }}">Add Patient</a></li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="{{ url('admin/patients') }}">Patient</a></li>
                             </ul>
                         </div>
                     </li>
+
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-laptop"></i>
+                            </span>
+                            <span class="menu-title">Service Section</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="{{ url('admin/add_service') }}">Add Service</a></li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="{{ url('admin/services') }}">Service List</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-laptop"></i>
+                            </span>
+                            <span class="menu-title">Appointment Section</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="{{ route('appointment.index') }}">Add Appointment</a></li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="{{ route('appointment.index') }}">Appoitment List</a></li>
+                            </ul>
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="{{ url('admin/services') }}">Appoitment Settings</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    
                     
                 </ul>
             </nav>

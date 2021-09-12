@@ -7,7 +7,7 @@
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Admin Panel</h4>
+                            <h4 class="card-title">All Patient List</h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>

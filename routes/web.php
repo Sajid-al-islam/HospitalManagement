@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('product','ProductController');
+Route::get('admin/add_doctors', [DoctorController::class, 'addDoctor']);
+Route::get('admin/doctors',[DoctorController::class, 'index']);
 
+Route::get('admin/add_service', [ServiceController::class, 'addService']);
+Route::get('admin/services', [ServiceController::class, 'index']);
+
+Route::get('admin/add_patient', [PatientController::class, 'addPatient']);
+Route::get('admin/patients', [PatientController::class, 'index']);
+
+Route::resource('appointment','AppointmentController');
     
 Route::get('/admin','AdminController@index')->name('admin_index');
-
-Route::get('admin/delete/{product}','AdminController@delete')->name('admin_delete');
